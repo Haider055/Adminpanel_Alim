@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:id="@+id/image"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:src="@color/darkRed">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_toRightOf="@id/image"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@id/drop"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lora"
+            android:textColor="#000000"
+            android:layout_marginLeft="8dp"
+            android:text="haider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+        <TextView
+            android:layout_below="@id/name"
+            android:id="@+id/email"
+            android:layout_toRightOf="@id/image"
+            android:textSize="14dp"
+            android:fontFamily="@font/lora"
+            android:textColor="#000000"
+            android:layout_marginLeft="8dp"
+            android:text="haiderzafar055"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/drop"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:id="@+id/linear"
+            android:layout_below="@id/email"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Block"
+                android:background="@android:color/transparent"
+                android:layout_margin="8dp"
+                android:textSize="12dp"
+                android:textColor="@color/nav_color"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+            <Button
+                android:textSize="12dp"
+                android:textColor="@color/nav_color"
+                android:background="@android:color/transparent"
+                android:text="Answers"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Button>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

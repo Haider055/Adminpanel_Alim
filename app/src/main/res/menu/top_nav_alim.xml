@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/aalim_image"
+            android:id="@+id/all_alim"
+            android:title="All Alim">
+
+        </item>
+        <item
+            android:icon="@drawable/ic_baseline_supervised_user_circle_24"
+            android:id="@+id/new_alim"
+            android:title="New Alim">
+
+        </item>
+    </group>
+
+</menu>

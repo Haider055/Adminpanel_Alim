@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:backgroundTint="#f7fcf9"
+    app:cardCornerRadius="6dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:background="@mipmap/ic_launcher_round"
+        android:layout_margin="8dp"
+        android:id="@id/image"
+        android:layout_height="50dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+        <ImageView
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"
+            android:layout_marginTop="8dp"
+            android:id="@+id/drop"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+    <TextView
+        android:layout_toLeftOf="@id/drop"
+        android:layout_toRightOf="@+id/image"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16dp"
+        android:text="Name"
+        android:textStyle="bold"
+        android:id="@+id/name"
+        android:fontFamily="@font/lora"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:textSize="12dp"
+            android:layout_below="@id/image"
+            android:text="Namebsskjsknskjsnjkskjncskjcndskcnsdcklsd"
+            android:id="@+id/description"
+            android:fontFamily="@font/lora"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <LinearLayout
+        android:layout_below="@id/description"
+        android:weightSum="2"
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:backgroundTint="#000000"
+            android:layout_weight="1"
+            android:id="@+id/answer"
+            android:background="@android:color/transparent"
+            android:textSize="12dp"
+            android:textColor="@color/nav_color"
+            android:text="Answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+
+        <Button
+            android:id="@+id/wazaif"
+            android:text="Wazaif"
+            android:textSize="12dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/nav_color"
+            android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Button>
+
+    </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
