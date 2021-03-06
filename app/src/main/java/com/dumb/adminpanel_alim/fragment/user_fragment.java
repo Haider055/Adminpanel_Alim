@@ -1,5 +1,6 @@
 package com.dumb.adminpanel_alim.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.dumb.adminpanel_alim.R;
 import com.dumb.adminpanel_alim.adapters.user_adapter;
+import com.dumb.adminpanel_alim.answers_to_user;
 import com.dumb.adminpanel_alim.models.model_user;
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ import java.util.List;
  * Use the {@link user_fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class user_fragment extends Fragment {
+public class user_fragment extends Fragment implements user_adapter.answers{
 
 
     RecyclerView recyclerView;
@@ -88,7 +90,13 @@ public class user_fragment extends Fragment {
         adapter=new user_adapter(list,getContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
+        adapter.onclickanswer(this);
 
         return view;
+    }
+
+    @Override
+    public void onclick(String id) {
+        startActivity(new Intent(getContext(), answers_to_user.class));
     }
 }

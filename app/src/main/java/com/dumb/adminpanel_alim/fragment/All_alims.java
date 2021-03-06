@@ -17,6 +17,7 @@ import com.dumb.adminpanel_alim.R;
 import com.dumb.adminpanel_alim.adapters.all_alims_adapter;
 import com.dumb.adminpanel_alim.answer_by_alim;
 import com.dumb.adminpanel_alim.models.model_all_alims;
+import com.dumb.adminpanel_alim.wazaif_of_alim;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.List;
  * Use the {@link All_alims#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class All_alims extends Fragment implements all_alims_adapter.answers{
+public class All_alims extends Fragment implements all_alims_adapter.answers,all_alims_adapter.wazaif{
 
     RecyclerView rec;
     all_alims_adapter adapter;
@@ -95,8 +96,8 @@ public class All_alims extends Fragment implements all_alims_adapter.answers{
         rec.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter=new all_alims_adapter(list,getContext());
         rec.setAdapter(adapter);
-        adapter.onclick(this);
-
+        adapter.onclickanswer(this);
+        adapter.onclickwazaif(this);
 
         return  view;
     }
@@ -104,6 +105,12 @@ public class All_alims extends Fragment implements all_alims_adapter.answers{
     @Override
     public void onclick(String id) {
         startActivity(new Intent(getContext(), answer_by_alim.class));
+
+    }
+
+    @Override
+    public void onclickwazaif(String id) {
+        startActivity(new Intent(getContext(), wazaif_of_alim.class));
 
     }
 }

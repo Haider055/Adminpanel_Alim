@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,11 +24,22 @@ public class user_adapter extends RecyclerView.Adapter<user_adapter.holder> {
 
     List<model_user> list;
     Context context;
+    answers m_answer;
 
     public user_adapter(List<model_user> list, Context context) {
         this.list = list;
         this.context = context;
     }
+
+
+    public interface answers{
+        public void onclick(String id);
+    }
+
+    public void onclickanswer(answers listener){
+        m_answer=listener;
+    }
+
 
     @NonNull
     @Override
@@ -64,6 +76,14 @@ public class user_adapter extends RecyclerView.Adapter<user_adapter.holder> {
             }
         });
 
+        holder.answer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                m_answer.onclick("1");
+            }
+        });
+
+
     }
 
     @Override
@@ -74,12 +94,18 @@ public class user_adapter extends RecyclerView.Adapter<user_adapter.holder> {
     public class holder extends RecyclerView.ViewHolder{
         TextView name,email;
         ImageView drop;
+        Button answer,block;
         LinearLayout linearLayout;
         public holder(@NonNull View itemView) {
             super(itemView);
 
             linearLayout=itemView.findViewById(R.id.linear);
+
+            answer=itemView.findViewById(R.id.answer);
+            block=itemView.findViewById(R.id.block);
+
             drop=itemView.findViewById(R.id.drop);
+
             name=itemView.findViewById(R.id.name);
             email=itemView.findViewById(R.id.email);
         }

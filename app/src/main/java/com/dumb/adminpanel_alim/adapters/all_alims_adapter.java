@@ -26,6 +26,7 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
     Context context;
 
     answers m_answer;
+    wazaif m_wazaif;
 
     public all_alims_adapter(List<model_all_alims> list, Context context) {
         this.list = list;
@@ -36,8 +37,17 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
         public void onclick(String id);
     }
 
-    public void onclick(answers listener){
+    public void onclickanswer(answers listener){
         m_answer=listener;
+    }
+
+
+    public interface wazaif{
+        public void onclickwazaif(String id);
+    }
+
+    public void onclickwazaif(wazaif listener){
+        m_wazaif=listener;
     }
 
 
@@ -89,6 +99,13 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
             }
         });
 
+        holder.wazaif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                m_wazaif.onclickwazaif("1");
+            }
+        });
+
     }
 
     @Override
@@ -113,7 +130,6 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
 
             name=itemView.findViewById(R.id.name);
             desc=itemView.findViewById(R.id.description);
-
 
 
         }
