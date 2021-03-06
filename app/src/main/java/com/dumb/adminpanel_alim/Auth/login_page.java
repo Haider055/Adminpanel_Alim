@@ -16,6 +16,14 @@ import com.dumb.adminpanel_alim.R;
 public class login_page extends AppCompatActivity {
 
     Button login;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finishAffinity();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

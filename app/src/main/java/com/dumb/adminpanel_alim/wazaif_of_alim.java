@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -17,14 +18,30 @@ import java.util.List;
 
 public class wazaif_of_alim extends AppCompatActivity {
 
+    androidx.appcompat.widget.Toolbar toolbar;
     RecyclerView rec;
     adapter_wazaif_of_alim adapter;
     List<model_wazaif_of_alim> list;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wazaif_of_alim);
+
+
+        toolbar=findViewById(R.id.tool);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         Window window = getWindow();
 

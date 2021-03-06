@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adminpanel_Alim">
-        <activity android:name=".answers_to_user"></activity>
-        <activity android:name=".wazaif_of_alim" />
+        <activity android:name=".answers_to_user"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"></activity>
+        <activity android:name=".wazaif_of_alim"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"></activity>
         <activity
             android:name=".answer_by_alim"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />

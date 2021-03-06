@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toolbar;
 
 import com.dumb.adminpanel_alim.adapters.adapter_answers_by_alim;
 import com.dumb.adminpanel_alim.models.model_answers_by_alim;
@@ -20,14 +23,29 @@ import java.util.List;
 
 public class answer_by_alim extends AppCompatActivity {
 
+    androidx.appcompat.widget.Toolbar toolbar;
     List<model_answers_by_alim> list;
     adapter_answers_by_alim adapter;
     RecyclerView recyclerView;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer_by_alim);
 
+        toolbar=findViewById(R.id.tool);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         Window window = getWindow();
 
