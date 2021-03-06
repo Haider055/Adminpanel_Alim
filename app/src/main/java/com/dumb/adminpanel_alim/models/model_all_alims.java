@@ -1,11 +1,20 @@
 package com.dumb.adminpanel_alim.models;
 
 public class model_all_alims {
-    String name,description;
+    String name,description,email;
 
-    public model_all_alims(String name, String description) {
+    public model_all_alims(String name, String description,String email) {
         this.name = name;
         this.description = description;
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {

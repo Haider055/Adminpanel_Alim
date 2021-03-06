@@ -37,8 +37,8 @@ public class adapter_answers_by_alim extends RecyclerView.Adapter<adapter_answer
         holder.username.setText(list.get(position).getUsername());
         holder.question.setText("Q- "+list.get(position).getQuestion());
         holder.answer.setText("Ans- "+list.get(position).getAnswer());
-        holder.q_date.setText(list.get(position).getQ_time());
-        holder.a_date.setText(list.get(position).getA_time());
+        holder.q_date.setText("Ask time  "+list.get(position).getQ_time());
+        holder.a_date.setText("Ans time  "+list.get(position).getA_time());
 
     }
 

@@ -35,11 +35,11 @@ public class adapter_answer_To_user extends RecyclerView.Adapter<adapter_answer_
     public void onBindViewHolder(@NonNull holder holder, int position) {
 
         holder.name.setText("Answer by :"+list.get(position).getAnswerby());
-        holder.answer.setText("Q- "+list.get(position).getAnswerby());
-        holder.question.setText("Ans- "+list.get(position).getQuestion());
+        holder.answer.setText("Ans- "+list.get(position).getAnswerby());
+        holder.question.setText("Q- "+list.get(position).getQuestion());
 
-        holder.question_date.setText(list.get(position).getQuestion_date());
-        holder.answer_date.setText(list.get(position).getAnswer_date());
+        holder.question_date.setText("Ask time  "+list.get(position).getQuestion_date());
+        holder.answer_date.setText("Ans time  "+list.get(position).getAnswer_date());
 
     }
 

@@ -54,15 +54,13 @@ public class wazaif_of_alim extends AppCompatActivity {
 // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.nav_color));
 
-
-
         list=new ArrayList<>();
 
         rec=findViewById(R.id.rec);
 
-        list.add(new model_wazaif_of_alim("wazaif","wazaifwazaif"));
-        list.add(new model_wazaif_of_alim("wazaif","wazaifwazaif"));
-        list.add(new model_wazaif_of_alim("wazaif","wazaifwazaif"));
+        list.add(new model_wazaif_of_alim("wazaif1","waza ifwaz aifwaz aifwaz aifwa zaif wazai fwazai fwazaifw azaif wazaif"));
+        list.add(new model_wazaif_of_alim("wazaif1","wazaif wazaif ifwaz aifwaz aifwaz aifwa zaif wazai fwazai fwazaifw azaif wazaif"));
+        list.add(new model_wazaif_of_alim("wazaif2","wazaif ifwaz aifwaz aifwaz aifwa zaif wazai fwazai fwazaifw azaif wazaif"));
 
         rec.hasFixedSize();
         rec.setLayoutManager(new LinearLayoutManager(this));

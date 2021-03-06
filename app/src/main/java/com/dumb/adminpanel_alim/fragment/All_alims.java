@@ -85,12 +85,12 @@ public class All_alims extends Fragment implements all_alims_adapter.answers,all
 
         list=new ArrayList<>();
 
-        list.add(new model_all_alims("haider","lorem ipsum"));
-        list.add(new model_all_alims("haider","lorem ipsum"));
-        list.add(new model_all_alims("haider","lorem ipsum"));
-        list.add(new model_all_alims("haider","lorem ipsum"));
-        list.add(new model_all_alims("haider","lorem ipsum"));
-        list.add(new model_all_alims("haider","lorem ipsum"));
+        list.add(new model_all_alims("haider","lorem ipsumNam ebsskj skns kjsnjkskjn cskjc ndskcnsd cklsdNamebs skjskn skjsnjk skjncskjcnd skcns dcklsd","haiderzafar088@gmail.com"));
+        list.add(new model_all_alims("haider","lorem ipsumNa mebsskjs knsk jsnjksk jncsk jcndsk cnsdc klsdNa mebssk jskn skjsnjks kjncsk jcndskcnsd cklsd","haiderzafar088@gmail.com"));
+        list.add(new model_all_alims("haider","lorem ipsumName bsskj sknskjsn jkskjncsk jcndskc nsdcklsdN amebssk jsknsk jsnjk skjncs kjcndskcnsdcklsd","haiderzafar088@gmail.com"));
+        list.add(new model_all_alims("haider","lorem ipsumNam eb sskjs knskj snjksk jncskjcn dskcnsdck lsdNam ebsskjsk nskjsnj kskjn cskjcndskcns dcklsd","haiderzafar088@gmail.com"));
+        list.add(new model_all_alims("haider","lorem ipsum","haiderzafar088@gmail.com"));
+        list.add(new model_all_alims("haider","lorem ipsum","haiderzafar088@gmail.com"));
 
         rec.hasFixedSize();
         rec.setLayoutManager(new LinearLayoutManager(getContext()));

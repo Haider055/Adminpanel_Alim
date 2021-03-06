@@ -67,7 +67,8 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
         holder.linear.setVisibility(View.GONE);
 
         holder.name.setText(list.get(position).getName());
-        holder.desc.setText(list.get(position).getDescription());
+        holder.desc.setText("              "+list.get(position).getDescription());
+        holder.email.setText(list.get(position).getEmail());
 
         final boolean[] a = {true};
 
@@ -87,10 +88,8 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
                     holder.drop.setImageDrawable(context.getDrawable(R.drawable.ic_baseline_arrow_drop_down_24));
                     a[0]=true;
                 }
-
             }
         });
-
 
         holder.answer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,17 +104,15 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
                 m_wazaif.onclickwazaif("1");
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
         return list.size();
     }
-
     public class holder extends RecyclerView.ViewHolder {
 
-        TextView name,desc;
+        TextView name,desc,email;
         ImageView drop;
         LinearLayout linear;
         Button answer,wazaif;
@@ -130,7 +127,7 @@ public class all_alims_adapter extends RecyclerView.Adapter<all_alims_adapter.ho
 
             name=itemView.findViewById(R.id.name);
             desc=itemView.findViewById(R.id.description);
-
+            email=itemView.findViewById(R.id.email);
 
         }
     }
