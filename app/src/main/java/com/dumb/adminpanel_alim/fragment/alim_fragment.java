@@ -73,7 +73,6 @@ public class alim_fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_alim_fragment, container, false);
-        Toast.makeText(getContext(), "alim", Toast.LENGTH_SHORT).show();
 
         bottomNavigationView=view.findViewById(R.id.nav);
 
